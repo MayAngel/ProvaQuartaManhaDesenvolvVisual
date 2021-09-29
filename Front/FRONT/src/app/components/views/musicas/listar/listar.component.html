@@ -1,0 +1,44 @@
+<mat-card>
+  <a mat-stroked-button color="warm" routerLink="/musicas/cadastrar"> Nova Musica </a>
+  <!-- <mat-card-action>
+  </mat-card-action> -->
+</mat-card>
+
+
+<table mat-table [dataSource]="musicasLista" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cantor">
+    <th mat-header-cell *matHeaderCellDef> Cantor </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.cantor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="duracao">
+    <th mat-header-cell *matHeaderCellDef> Duracao </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.duracao}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="compositor">
+    <th mat-header-cell *matHeaderCellDef> Compositor </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.compositor}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="estilo">
+    <th mat-header-cell *matHeaderCellDef> Estilo </th>
+    <td mat-cell *matCellDef="let musica"> {{musica.estilo}} </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

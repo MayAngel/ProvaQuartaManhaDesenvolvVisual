@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-card-title> Nova Musica </mat-card-title>
+  <mat-card-content>
+
+    <div id="nome">
+      <mat-form-field appearance="legacy">
+        <mat-label for="nome">Nome da Musica</mat-label>
+        <input matInput required="true" type="text" name="nome" [(ngModel)]="nome" />
+      </mat-form-field>
+    </div>
+    <div id="cantor">
+      <mat-form-field appearance="legacy">
+        <mat-label for="cantor">Cantor</mat-label>
+        <input matInput required="true" type="text" name="cantor" [(ngModel)]="cantor" />
+      </mat-form-field>
+    </div>
+    <div id="compositor">
+      <mat-form-field appearance="legacy">
+        <mat-label for="duracao">Duracao</mat-label>
+        <input matInput required="true" type="number" name="duracao" [(ngModel)]="duracao" />
+      </mat-form-field>
+    </div>
+    <div id="compositor">
+      <mat-form-field appearance="legacy">
+        <mat-label for="compositor">Compositor</mat-label>
+        <input matInput required="true" type="text" name="compositor" [(ngModel)]="compositor" />
+      </mat-form-field>
+    </div>
+
+    <div id="estilo">
+      <mat-form-field appearance="legacy">
+        <mat-label for="estilo">Estilo</mat-label>
+        <input matInput required="true" type="text" name="estilo" [(ngModel)]="estilo" />
+      </mat-form-field>
+    </div>
+
+
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
+    <a mat-stroked-button routerLink="/musicas/listar"> Listar Musicas</a>
+  </mat-card-actions>
+
+</mat-card>
